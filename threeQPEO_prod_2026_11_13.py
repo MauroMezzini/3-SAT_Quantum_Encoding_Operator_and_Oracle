@@ -149,8 +149,8 @@ def register_conditional_bit_flip_(N):
     qc = QuantumCircuit(2*N)
     # Flip qubit G.N + j when phase-register qubit j is |0>.
     zero_controlled_x = XGate().control(1, ctrl_state="0")
-    for j in range(G.N):
-        qc.append(zero_controlled_x, [j, G.N + j])
+    for j in range(N):
+        qc.append(zero_controlled_x, [j, N + j])
     return qc
 
 
@@ -191,7 +191,7 @@ def phase_estimation_circuit(G, is_superposition=True):
        qpe_qc.h(range(m))
 
     # Apply the conditional bit-flip preparation to the target register.
-    zqc = register_conditional_bit_flip_(G.N)
+    zqc = register_conditional_bit_flip_(N)
     qpe_qc.compose(
        zqc,
        qubits=range(m, m + zqc.num_qubits),
