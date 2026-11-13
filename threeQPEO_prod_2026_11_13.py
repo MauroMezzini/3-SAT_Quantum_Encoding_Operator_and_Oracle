@@ -191,7 +191,7 @@ def phase_estimation_circuit(G, is_superposition=True):
        qpe_qc.h(range(m))
 
     # Apply the conditional bit-flip preparation to the target register.
-    zqc = register_conditional_bit_flip_(N)
+    zqc = register_conditional_bit_flip_(int(N/2))
     qpe_qc.compose(
        zqc,
        qubits=range(m, m + zqc.num_qubits),
