@@ -46,7 +46,7 @@ Key capabilities include:
 
 4. **Quantum Phase Estimation (`phase_estimation_circuit`)**
    - Uses an $m$-qubit phase register with base angle $\theta = \frac{2\pi}{2^m}$.
-   - Applies controlled-$B^{2^j}$ operations across the $2N$ target qubits followed by an inverse QFT (`QFTGate(m).inverse()`).
+   - Applies controlled $B^{2^j}$ operations across the $2N$ target qubits followed by an inverse QFT (`QFTGate(m).inverse()`).
 
 ---
 
