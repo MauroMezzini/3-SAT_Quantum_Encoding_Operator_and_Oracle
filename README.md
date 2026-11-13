@@ -1,0 +1,2 @@
+# 3-SAT_Quantum_Encoding_Operator_and_Oracle
+3-SAT_Quantum_Encoding_Operator_and_Oracle
