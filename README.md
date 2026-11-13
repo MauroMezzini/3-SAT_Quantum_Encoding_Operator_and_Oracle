@@ -107,5 +107,4 @@ compose into a larger circuit or simulate with Qiskit.
 - The QPE circuit uses `G.m + 2 * G.N` qubits.
 - `is_superposition=True` prepares the phase register and the first half of
   the target register in superposition.
-- State-vector simulation requires memory that grows exponentially with the
-  number of qubits; keep library use to small instances.
+
